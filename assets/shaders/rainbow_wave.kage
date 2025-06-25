@@ -1,0 +1,11 @@
+package main
+
+var Time float
+
+func Fragment(position vec4, texCoord vec2, color vec4) vec4 {
+	shift := texCoord.x + Time*0.2
+	r := 0.5 + 0.5*sin(shift*6.28)
+	g := 0.5 + 0.5*sin(shift*6.28+2.1)
+	b := 0.5 + 0.5*sin(shift*6.28+4.2)
+	return vec4(r, g, b, 1.0)
+}

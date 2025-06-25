@@ -1,0 +1,12 @@
+package main
+
+var (
+	Time float
+)
+
+func Fragment(position vec4, texCoord vec2, color vec4) vec4 {
+	center := vec2(mod(Time*1.0, 1.2)-0.1, mod(0.5*Time, 1.2))
+	dist := distance(texCoord, center)
+	brightness := smoothstep(0.2, 0.0, dist)
+	return vec4(vec3(brightness), 1.0)
+}
