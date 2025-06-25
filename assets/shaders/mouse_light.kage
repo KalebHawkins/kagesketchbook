@@ -1,0 +1,12 @@
+package main
+
+var (
+	Time  float
+	Mouse vec2
+)
+
+func Fragment(position vec4, texCoord vec2, color vec4) vec4 {
+	dist := distance(position.xy, Mouse)
+	factor := clamp(1.0-dist/100.0, 0.0, 1.0)
+	return vec4(factor, factor, factor, 1.0)
+}

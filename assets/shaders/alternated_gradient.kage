@@ -1,0 +1,5 @@
+package main
+
+func Fragment(position vec4, texCoord vec2, color vec4) vec4 {
+	return vec4(texCoord.x, texCoord.y, 1.0-texCoord.x, 1.0)
+}

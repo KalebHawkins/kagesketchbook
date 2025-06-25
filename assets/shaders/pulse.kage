@@ -1,0 +1,10 @@
+package main
+
+var (
+	Time float
+)
+
+func Fragment(position vec4, texCoord vec2, color vec4) vec4 {
+	pulse := sin(Time)
+	return vec4(color.r*pulse, color.g*pulse, color.b*pulse, color.a)
+}
